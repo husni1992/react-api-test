@@ -1,0 +1,89 @@
+React with Flux Starter Kit of this tute :- https://github.com/coryhouse/react-flux-starter-kit
+Packages need to be installed initially:- npm install --save gulp@3.9.0 gulp-connect@2.2.0 gulp-open@1.0.0
+Packages need to be installed for live reload :- npm install --save browserify@11.0.1 reactify@1.1 vinyl-source-stream@1.1.0
+Bootstrap n etc :-  npm install --save bootstrap@3.3.5 jquery@2.1.4 gulp-concat@2.6.0
+jslint :- npm install --save gulp-eslint@0.15.0
+
+WHY REACT
+----------
+JSX - Markup in js , (html)
+Virtual DOM - Enhances by minimizing expensive updates to the dom
+Isomorphic Rendering - Render in client and server
+Unidirectonal dataflows - Easer to reason about, single direction by centrazlied dispatcher
+
+Versions used in this tute
+----------------------------
+React 0.13.3
+React-router 0.13.3
+Flux 2.0.3
+
+Technologies used
+------------------
+NodeJS
+Browserfy
+React Component
+React/ROUTER
+FLUX unidirectional dataflows
+Gulp
+
+ 
+-CommonJS Pattern- requireJS
+----------------------
+var dependancy = require('/path/to/file')
+
+// declare module
+var myModule = {
+  // code here
+}
+
+// expose to others
+module.exports = myModule
+
+-Browserfy-
+---------------
+To get all node packages in browser reference in index.html
+Bundle all node modules into one single file, minimizing http requests
+
+
+-React-
+---------
+Component Library
+Simple composition
+Utilizes virtual dom, when ui changes react comes from old states to new states and updates dom
+rener in client and server
+
+-ReaCT router-
+--------------
+
+
+-FLUX-
+unidirectional dataflow patter
+more a pattern than library
+
+
+-Gulp-
+-------
+Keeps all work in memeory not writing in disk,, dats why its fast
+type package.json to read the file inside cmd itself
+
+
+
+React Component lifecycle Methods - https://facebook.github.io/react/docs/component-specs.html
+------------------------------------------------------------------------------------------------
+
+Props - <div route="/abc"/> Immtable. looks like html attributes
+
+State - Holds mutable state, this.state.username
+
+* componentWillMount: before initial render client and server - best place to set initial state
+* componentDidMount: after render - now component dom exists, can integrate with other frameworks now, set timers, ajax reqs
+* componentWillReceiveProps: recieving new props, or probs are changed, not called in initial render, can use this to set state before the next render
+* shouldComponentUpdate: Runs before render and when new props and states are reveived, not called on initial render/ this is done for performance, return false to avoid unnesesary re-renders
+* componentWillUpdate: Immediately before rendering when new props and state are recived, cannot call set state
+* componentDidUpdate: After component's updates are flushed    
+* componentWillUnmount: just before component unmounted by the dom, in here we cleanup by destroying related resources, or dom elements
+
+Controller View
+------------------
+Its a top level react component
+This controlls data flows for all of its child components, by setting props on child comppnents. It will interact flux stores
