@@ -71,9 +71,9 @@ type package.json to read the file inside cmd itself
 React Component lifecycle Methods - https://facebook.github.io/react/docs/component-specs.html
 ------------------------------------------------------------------------------------------------
 
-Props - <div route="/abc"/> Immtable. looks like html attributes
+Props - <div route="/abc"/> Immtable. looks like html attributes, passed down from parent to chils
 
-State - Holds mutable state, this.state.username
+State - Holds mutable state, this.state.username , this.setState({authors: AuthorApi.getAllAuthors()});
 
 * componentWillMount: before initial render client and server - best place to set initial state
 * componentDidMount: after render - now component dom exists, can integrate with other frameworks now, set timers, ajax reqs
@@ -82,6 +82,27 @@ State - Holds mutable state, this.state.username
 * componentWillUpdate: Immediately before rendering when new props and state are recived, cannot call set state
 * componentDidUpdate: After component's updates are flushed    
 * componentWillUnmount: just before component unmounted by the dom, in here we cleanup by destroying related resources, or dom elements
+
+**props validation** 
+--------------------
+**> Validation isnt run in production(minified) version of React
+
+propTypes:{
+    author: React.PropTypes.object.isRequried,
+    onSave: React.PropTypes.func.isRequired,
+    validate: React.PropTypes.func.isRequired,
+    errors: React.PropTypes.object,
+    hasErrors: React.PropTypes.func.isRequires
+}
+
+optionalArray: React.PropTypes.array,
+optionalBool: React.PropTypes.bool,
+optionalFunc: React.PropTypes.func,
+optionalNumber: React.PropTypes.number,
+optionalObject: React.PropTypes.object,
+optionalString: React.PropTypes.string
+
+
 
 Controller View
 ------------------

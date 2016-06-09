@@ -3,8 +3,11 @@
 var React = require('react');
 
 var AuthorList = React.createClass({
+    // to validate props
+    propTypes: {
+      authors: React.PropTypes.array.isRequired
+    },
     render: function(){
-        
         var createAuthorRow = function(author){
             return (
                 <tr key={author.id}>

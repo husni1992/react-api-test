@@ -6,44 +6,46 @@ var AuthorList = require('./authorList');
 
 var AuthorPage = React.createClass({
     getInitialState: function(){
-        console.info("run - getInitialState");
+        //console.info("run - getInitialState");
         return {
             authors: []
         };
     },
     
     // test these life cycle methods
-    getDefaultProps: function(){
-      console.info("run - getDefaultProps");
-    },
+//    getDefaultProps: function(){
+//      console.info("run - getDefaultProps");
+//    },
+//    componentWillMount: function(){
+//      console.info("run - componentWillMount");
+//    },
+//    componentWillReceiveProps: function(){
+//      console.info("run - componentWillReceiveProps");
+//    },
+//    shouldComponentUpdate: function(){
+//      console.info("run - shouldComponentUpdate");
+//    },
+//    componentWillUpdate: function(){
+//      console.info("run - componentWillUpdate");
+//    },
+//    componentDidUpdate: function(){
+//      console.info("run - componentDidUpdate");
+//    },
+//    componentWillUnmount: function(){
+//      console.info("run - componentWillUnmount");
+//    },
+    
+    
+    
     componentDidMount: function(){
-      console.info("run - componentDidMount");
-    },
-    componentWillReceiveProps: function(){
-      console.info("run - componentWillReceiveProps");
-    },
-    shouldComponentUpdate: function(){
-      console.info("run - shouldComponentUpdate");
-    },
-    componentWillUpdate: function(){
-      console.info("run - componentWillUpdate");
-    },
-    componentDidUpdate: function(){
-      console.info("run - componentDidUpdate");
-    },
-    componentWillUnmount: function(){
-      console.info("run - componentWillUnmount");
-    },
-    
-    
-    
-    componentWillMount: function(){
-        console.info("run - componentWillMount");
-        this.setState({authors: AuthorApi.getAllAuthors()});
+        //console.info("run - componentWillMount");
+        if(this.isMounted){
+            this.setState({authors: AuthorApi.getAllAuthors()});    
+        }        
     },
     
    render: function(){
-       console.info("RUN - render");
+       //console.info("RUN - render");
        
        return (
             <div>
