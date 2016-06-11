@@ -83,8 +83,9 @@ State - Holds mutable state, this.state.username , this.setState({authors: Autho
 * componentDidUpdate: After component's updates are flushed    
 * componentWillUnmount: just before component unmounted by the dom, in here we cleanup by destroying related resources, or dom elements
 
-**props validation** 
---------------------
+
+**props validation**  only in development mode, not in minified
+----------------------------------------------------------------
 **> Validation isnt run in production(minified) version of React
 
 propTypes:{
@@ -103,8 +104,13 @@ optionalObject: React.PropTypes.object,
 optionalString: React.PropTypes.string
 
 
-
-Controller View
+Controller View  - Smart components that passs data to dumb component(child) via props
 ------------------
 Its a top level react component
 This controlls data flows for all of its child components, by setting props on child comppnents. It will interact flux stores
+
+
+Mixins
+--------
+For coss-cutting multiple components
+Share code between multiple components

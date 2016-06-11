@@ -1,5 +1,7 @@
 "use strict";
 
+// this is a controller view, smart component
+
 var React = require('react');
 var AuthorApi = require('../../api/authorApi');
 var AuthorList = require('./authorList');
