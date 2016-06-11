@@ -122,3 +122,20 @@ Route: Declaratively map a route
 DefaultRoute: "/." like for index.html
 NotFoundRoute: client-side-404
 Redirect: redirect :)
+
+Links
+------
+
+Url: /user/1
+Route: <route name="user" path="/user/:userId" />
+JSX: <Link to="user" params={{userId: 1}}>Bobby Tables </Link>
+The to param refers to the Route name in router<Link to="about">About page </Link>
+<a href="/user/1">Bobby Tables </a>
+
+handle 404: 
+	var NotFoundRoute = Router.NotFoundRoute;
+	<NotFoundRoute handler={require('./components/common/notfoundPage')} />
+
+redirect: 
+	<Redirect from="about-us" to="about" /> 
+	simple as that :)	
