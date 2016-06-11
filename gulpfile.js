@@ -10,6 +10,7 @@ var reactify = require('reactify') // Transforms React JSX to JS
 var source = require('vinyl-source-stream'); // use conventional text streams with gulp 
 var concat = require('gulp-concat'); // concatenats files
 var lint = require('gulp-eslint'); // lint JS files, including JSX
+var clean = require('gulp-clean');
 
 var config = {
     port: 9005,
@@ -50,6 +51,11 @@ gulp.task('html', function(){
 });
 
 gulp.task('js', function(){
+    
+    // written by husny to delete bundle.js if errors or at the time of rebuilding.
+//    gulp.src(config.paths.dist + '/scripts/*.js', {read: false})
+//		.pipe(clean());
+    
    browserify(config.paths.mainJs)
     .transform(reactify)
     .bundle()

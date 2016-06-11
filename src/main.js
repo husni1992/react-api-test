@@ -5,6 +5,7 @@ var About = require('./components/about/aboutpage');
 var Header = require('./components/common/header.jsx');
 var ImageBox = require('./components/imagebox/imagebox');
 var AuthorPage = require('./components/authors/authorPage');
+var route = require('./routes');
 
 (function(win){
 "use strict";

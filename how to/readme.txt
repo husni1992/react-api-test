@@ -114,3 +114,11 @@ Mixins
 --------
 For coss-cutting multiple components
 Share code between multiple components
+
+
+React Router
+-------------
+Route: Declaratively map a route
+DefaultRoute: "/." like for index.html
+NotFoundRoute: client-side-404
+Redirect: redirect :)
