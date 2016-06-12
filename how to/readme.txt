@@ -139,3 +139,8 @@ handle 404:
 redirect: 
 	<Redirect from="about-us" to="about" /> 
 	simple as that :)	
+
+Router transitions
+------------------
+willTransitionTo : function when transition to a particular state
+willTransitionFrom: function when exiting from a page	

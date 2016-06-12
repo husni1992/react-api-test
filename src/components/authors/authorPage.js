@@ -47,8 +47,6 @@ var AuthorPage = React.createClass({
     },
     
    render: function(){
-       //console.info("RUN - render");
-       
        return (
             <div>
                 <h1>Authors</h1>
