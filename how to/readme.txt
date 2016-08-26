@@ -4,8 +4,8 @@ Packages need to be installed for live reload :- npm install --save browserify@1
 Bootstrap n etc :-  npm install --save bootstrap@3.3.5 jquery@2.1.4 gulp-concat@2.6.0
 jslint :- npm install --save gulp-eslint@0.15.0
 
-WHY REACT
-----------
+WHY REACTJS?
+-------------
 JSX - Markup in js , (html)
 Virtual DOM - Enhances by minimizing expensive updates to the dom
 Isomorphic Rendering - Render in client and server
